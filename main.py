@@ -14,7 +14,7 @@ logging.basicConfig(
     level=getattr(logging, LOG_LEVEL, logging.INFO),
     format="%(asctime)s %(levelname)s %(message)s",
 )
-logger = logging.getLogger("ttv-cat-noti")
+logger = logging.getLogger("ttv-category-notifier")
 
 
 class TwitchClient:

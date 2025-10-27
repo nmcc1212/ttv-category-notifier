@@ -1,7 +1,7 @@
 services:
-  ttv-cat-noti:
+  ttv-category-notifier:
     build: .
-    container_name: ttv-cat-noti
+    container_name: ttv-category-notifier
     restart: unless-stopped
     env_file: .env
     environment:
