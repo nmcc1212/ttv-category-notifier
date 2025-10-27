@@ -45,6 +45,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v3
         with:
-          subject-name: ghcr.io/nmcc1212/ttv-category-notifier:latest
+          subject-name: ghcr.io/nmcc1212/ttv-category-notifier
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
