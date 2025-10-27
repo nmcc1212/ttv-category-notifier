@@ -1,0 +1,11 @@
+services:
+  ttv-cat-noti:
+    build: .
+    container_name: ttv-cat-noti
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # Default state path is /data/state.json; can override here if desired
+      - STATE_FILE=/data/state.json
+    volumes:
+      - ./data:/data
