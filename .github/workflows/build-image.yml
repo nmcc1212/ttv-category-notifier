@@ -6,6 +6,11 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     steps:
       - name: Check out the repository
         uses: actions/checkout@v5
@@ -21,8 +26,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: nmcc1212
-          password: ${{ secrets.GHCR_PAT }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build ttv-category-notifier image and push
         if: github.ref == 'refs/heads/main'
