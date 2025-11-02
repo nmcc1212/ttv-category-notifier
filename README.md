@@ -51,17 +51,17 @@ You can run this in Docker; `STATE_FILE` defaults to `/data/state.json`, so bind
 ### Build
 
 ```bash
-docker build -t ttv-cat-noti:latest .
+docker build -t ttv-category-notifier:latest .
 ```
 
 ### Run
 
 ```bash
 # assumes you have .env in the project root
-docker run --name ttv-cat-noti \
+docker run --name ttv-category-notifier \
    --env-file .env \
    -v $(pwd)/data:/data \
-   -d ttv-cat-noti:latest
+   -d ttv-category-notifier:latest
 ```
 
 ### Docker Compose
